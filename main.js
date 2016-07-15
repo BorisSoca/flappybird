@@ -6,7 +6,7 @@ var mainState = {
     },
 
     create: function() {
-    game.stage.backgroundColor = '#71c5cf';
+    game.stage.backgroundColor = 'red';
     game.physics.startSystem(Phaser.Physics.ARCADE);
     this.bird= game.add.sprite(100,254, 'bird')
     game.physics.arcade.enable(this.bird);
@@ -16,7 +16,7 @@ var mainState = {
                      Phaser.Keyboard.SPACEBAR);
 
      spaceKey.onDown.add(this.jump, this);
-     this.pipes = game.add.group(); 
+     this.pipes = game.add.group();
      this.timer = game.time.events.loop(1500, this.addRowOfPipes, this);
     },
 
